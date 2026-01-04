@@ -34,8 +34,8 @@ export default function Home() {
         
         {/* View Mode: Year Grid */}
         <div className={cn(
-          "transition-all duration-500 ease-in-out w-full flex justify-center",
-          isWriting ? "blur-sm scale-95 opacity-50 pointer-events-none" : "opacity-100 scale-100"
+          "transition-all duration-700 ease-in-out w-full flex justify-center",
+          isWriting ? "blur-md scale-95 opacity-60 pointer-events-none" : "opacity-100 scale-100"
         )}>
           <div className="flex flex-col items-center gap-12 w-full">
             <YearGrid />
@@ -43,7 +43,7 @@ export default function Home() {
             {/* Plant Memory Button (Trigger) */}
             <button 
               onClick={() => setIsWriting(true)}
-              className="group flex flex-col items-center gap-3 transition-all hover:scale-105 mt-8"
+              className="group flex flex-col items-center gap-3 transition-all hover:scale-105 mt-12"
             >
               <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center text-primary text-4xl font-light pb-1 group-hover:bg-primary/5 transition-colors shadow-lg shadow-primary/10">
                 +
@@ -53,13 +53,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Writing Mode: Glassmorphism Overlay */}
+        {/* Writing Mode: True Glassmorphism Overlay */}
         <div className={cn(
           "fixed inset-0 z-50 flex items-center justify-center transition-all duration-500",
-          !isWriting ? "opacity-0 pointer-events-none backdrop-blur-none" : "opacity-100 backdrop-blur-md bg-background/30"
+          !isWriting ? "opacity-0 pointer-events-none backdrop-blur-none" : "opacity-100 backdrop-blur-sm bg-black/5"
         )}>
           <div className={cn(
-            "relative w-full max-w-2xl bg-white/40 backdrop-blur-xl border border-white/50 shadow-2xl rounded-3xl p-12 flex flex-col items-center transition-all duration-500 transform",
+            "relative w-full max-w-2xl bg-white/70 backdrop-blur-2xl border border-white/50 shadow-2xl rounded-3xl p-12 flex flex-col items-center transition-all duration-500 transform",
             !isWriting ? "scale-90 translate-y-8" : "scale-100 translate-y-0"
           )}>
             

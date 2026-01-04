@@ -16,25 +16,25 @@ export default function YearGrid() {
   });
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-8">
+    <div className="w-full max-w-6xl mx-auto px-8">
       {/* Header */}
-      <div className="mb-12 text-center">
-        <div className="inline-block bg-primary text-primary-foreground px-6 py-1.5 rounded-full text-sm font-bold mb-4 shadow-lg shadow-primary/20">
+      <div className="mb-16 text-center">
+        <div className="inline-block bg-primary text-primary-foreground px-8 py-2 rounded-full text-base font-bold mb-6 shadow-lg shadow-primary/20 tracking-widest">
           {format(today, "yyyy")}
         </div>
-        <div className="flex gap-6 justify-center text-primary/40 text-2xl">
+        <div className="flex gap-8 justify-center text-primary/40 text-3xl">
           <span className="hover:text-primary transition-colors cursor-default">☼</span>
           <span className="hover:text-primary transition-colors cursor-default">☁</span>
           <span className="hover:text-primary transition-colors cursor-default">☂</span>
         </div>
       </div>
 
-      {/* Desktop Grid Layout */}
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-12 gap-y-12">
+      {/* Symmetrical 3x4 Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-16">
         {months.map((monthDays, monthIndex) => (
-          <div key={monthIndex} className="flex flex-col gap-4">
+          <div key={monthIndex} className="flex flex-col gap-5 items-center">
             {/* Month Label */}
-            <div className="text-primary/40 font-mono text-xs uppercase tracking-[0.2em] text-center">
+            <div className="text-primary/40 font-mono text-xs uppercase tracking-[0.3em] text-center">
               {format(monthDays[0], "MMM")}
             </div>
             
@@ -49,11 +49,11 @@ export default function YearGrid() {
                   <div
                     key={dateKey}
                     className={cn(
-                      "w-2 h-2 rounded-full transition-all duration-300 cursor-default",
+                      "w-3 h-3 rounded-full transition-all duration-300 cursor-pointer",
                       hasEntry 
-                        ? "bg-primary scale-125 shadow-[0_0_8px_rgba(0,0,170,0.3)]" 
-                        : "bg-primary/10 hover:bg-primary/30",
-                      isToday && !hasEntry && "ring-1 ring-primary ring-offset-2 ring-offset-background animate-pulse"
+                        ? "bg-primary scale-110 shadow-[0_0_10px_rgba(0,0,170,0.4)]" 
+                        : "bg-primary/10 hover:bg-primary/30 hover:scale-125",
+                      isToday && !hasEntry && "ring-2 ring-primary ring-offset-2 ring-offset-background animate-pulse"
                     )}
                     title={format(day, "MMM d, yyyy")}
                   />
