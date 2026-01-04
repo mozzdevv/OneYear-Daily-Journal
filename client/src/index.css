@@ -4,8 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Quicksand", sans-serif;
-  --font-display: "Patrick Hand", cursive;
+  --font-mono: "Courier Prime", "Courier New", monospace;
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -46,96 +45,85 @@
 }
 
 :root {
-  /* Digital Hygge Theme Colors */
-  /* Primary: Deep Indigo Ink #4338ca */
-  --primary: oklch(0.424 0.199 265.638);
-  --primary-foreground: oklch(0.985 0 0);
+  /* Modern Minimalist Theme from Video */
+  /* Deep Blue Ink #0000aa (approximate from video) */
+  --primary: #0000aa;
+  --primary-foreground: #ffffff;
   
-  /* Background: Warm Off-White Paper #fdfbf7 */
-  --background: oklch(0.982 0.008 85.5);
-  --foreground: oklch(0.32 0.08 265.6);
+  /* Clean Light Gray Background #e5e5e5 */
+  --background: #e5e5e5;
+  --foreground: #0000aa;
   
-  /* Card: Slightly lighter paper */
-  --card: oklch(0.99 0.005 85.5);
-  --card-foreground: oklch(0.32 0.08 265.6);
+  /* Card: Same as background for seamless look */
+  --card: #e5e5e5;
+  --card-foreground: #0000aa;
   
   /* Popover */
-  --popover: oklch(0.99 0.005 85.5);
-  --popover-foreground: oklch(0.32 0.08 265.6);
+  --popover: #e5e5e5;
+  --popover-foreground: #0000aa;
   
-  /* Secondary: Soft Sage Green */
-  --secondary: oklch(0.93 0.03 150);
-  --secondary-foreground: oklch(0.35 0.08 150);
+  /* Secondary: Slightly darker gray for inactive elements */
+  --secondary: #d4d4d4;
+  --secondary-foreground: #0000aa;
   
-  /* Muted: Light Grayish Blue */
-  --muted: oklch(0.95 0.01 260);
-  --muted-foreground: oklch(0.6 0.03 260);
+  /* Muted */
+  --muted: #d4d4d4;
+  --muted-foreground: #0000aa;
   
-  /* Accent: Warm Terracotta hint */
-  --accent: oklch(0.95 0.02 60);
-  --accent-foreground: oklch(0.4 0.1 60);
+  /* Accent */
+  --accent: #d4d4d4;
+  --accent-foreground: #0000aa;
   
   /* Destructive */
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive: #ff4444;
+  --destructive-foreground: #ffffff;
   
-  /* Border: Soft pencil line */
-  --border: oklch(0.9 0.01 265);
-  --input: oklch(0.9 0.01 265);
-  --ring: oklch(0.424 0.199 265.638);
+  /* Border: Deep Blue */
+  --border: #0000aa;
+  --input: #0000aa;
+  --ring: #0000aa;
   
-  /* Chart colors */
-  --chart-1: oklch(0.424 0.199 265.638);
-  --chart-2: oklch(0.55 0.15 265);
-  --chart-3: oklch(0.65 0.12 265);
-  --chart-4: oklch(0.75 0.1 265);
-  --chart-5: oklch(0.85 0.08 265);
+  --radius: 0.5rem;
   
-  --radius: 0.75rem;
-  
-  --sidebar: oklch(0.97 0.01 85);
-  --sidebar-foreground: oklch(0.32 0.08 265.6);
-  --sidebar-primary: oklch(0.424 0.199 265.638);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.95 0.02 60);
-  --sidebar-accent-foreground: oklch(0.4 0.1 60);
-  --sidebar-border: oklch(0.9 0.01 265);
-  --sidebar-ring: oklch(0.424 0.199 265.638);
+  --sidebar: #e5e5e5;
+  --sidebar-foreground: #0000aa;
+  --sidebar-primary: #0000aa;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d4d4d4;
+  --sidebar-accent-foreground: #0000aa;
+  --sidebar-border: #0000aa;
+  --sidebar-ring: #0000aa;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Inverted Minimalist Theme */
+  --primary: #aaddff;
+  --primary-foreground: #000033;
+  --background: #1a1a1a;
+  --foreground: #aaddff;
+  --card: #1a1a1a;
+  --card-foreground: #aaddff;
+  --popover: #1a1a1a;
+  --popover-foreground: #aaddff;
+  --secondary: #333333;
+  --secondary-foreground: #aaddff;
+  --muted: #333333;
+  --muted-foreground: #aaddff;
+  --accent: #333333;
+  --accent-foreground: #aaddff;
+  --destructive: #ff6666;
+  --destructive-foreground: #000000;
+  --border: #aaddff;
+  --input: #aaddff;
+  --ring: #aaddff;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #aaddff;
+  --sidebar-primary: #aaddff;
+  --sidebar-primary-foreground: #000033;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #aaddff;
+  --sidebar-border: #aaddff;
+  --sidebar-ring: #aaddff;
 }
 
 @layer base {
@@ -143,14 +131,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-    background-image: url('/images/paper_texture.jpg');
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-attachment: fixed;
+    @apply bg-background text-foreground font-mono; /* Monospace font for typewriter feel */
+    background-image: none; /* Remove paper texture */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-mono font-bold;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -166,24 +151,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -194,16 +166,16 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
 }
