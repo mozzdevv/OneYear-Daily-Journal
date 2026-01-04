@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Garden from "./pages/Garden";
 import Journal from "./pages/Journal";
+import AnimationShowcase from "./pages/AnimationShowcase";
 
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/garden"} component={Garden} />
       <Route path={"/journal"} component={Journal} />
+      <Route path={"/animation-showcase"} component={AnimationShowcase} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
