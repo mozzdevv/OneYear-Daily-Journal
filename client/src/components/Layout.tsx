@@ -34,14 +34,16 @@ export default function Layout({ children }: LayoutProps) {
         {navItems.map((item) => {
           const isActive = location === item.href;
           return (
-            <Link key={item.href} href={item.href}>
-              <a className={cn(
+            <Link 
+              key={item.href} 
+              href={item.href}
+              className={cn(
                 "flex flex-col items-center gap-1 transition-all duration-300 hover:scale-110",
                 isActive ? "text-primary" : "text-muted-foreground hover:text-primary/70"
-              )}>
-                <item.icon className={cn("w-6 h-6", isActive && "fill-current")} strokeWidth={isActive ? 2.5 : 2} />
-                <span className="text-[10px] font-medium uppercase tracking-wider">{item.label}</span>
-              </a>
+              )}
+            >
+              <item.icon className={cn("w-6 h-6", isActive && "fill-current")} strokeWidth={isActive ? 2.5 : 2} />
+              <span className="text-[10px] font-medium uppercase tracking-wider">{item.label}</span>
             </Link>
           );
         })}
