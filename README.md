@@ -32,8 +32,8 @@ A beautiful, open-source desktop daily journal app that transforms your year int
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/mozzdevv/Quirky-Daily-Journal.git
-    cd Quirky-Daily-Journal
+    git clone https://github.com/mozzdevv/OneYear-Daily-Journal.git
+    cd OneYear-Daily-Journal
     ```
 
 2.  Install dependencies:
